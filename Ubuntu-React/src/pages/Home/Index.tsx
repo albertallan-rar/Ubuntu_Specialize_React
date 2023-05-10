@@ -41,7 +41,13 @@ function Home() {
 
     return (
     <div className={styles.container}>
-        <h1>Lista de Presença</h1>
+        <header>
+            <h1>Lista de Presença</h1>
+            <div>
+                <strong>Albert</strong>
+                <img src="https://github.com/albertallan-rar.png" alt="" />
+            </div>
+        </header>
         <input 
         type='text' 
         placeholder="Digite alguma coisa"
