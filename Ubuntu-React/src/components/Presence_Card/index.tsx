@@ -1,10 +1,15 @@
 import styles from './styles.module.css'
 
-function PresenceArea() {
+interface PresenceAreaProps{
+    name:string;
+    time:string;
+}
+
+function PresenceArea(props: PresenceAreaProps) {
     return (
         <div className={styles.card}>
-            <strong>Presence Area</strong>
-            <small>Teste</small>
+            <strong>{props.name}</strong>
+            <small>{props.time}</small>
         </div>
     )
 }

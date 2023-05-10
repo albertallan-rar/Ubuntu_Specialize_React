@@ -9,9 +9,9 @@ function Home() {
         <input type='text' placeholder="Digite alguma coisa"></input>
         <button type="button">Adicionar</button>
 
-        <PresenceArea />
-        <PresenceArea />
-        <PresenceArea />
+        <PresenceArea name="Batatinha" time="10:24:35"/>
+        <PresenceArea name="Joao" time="10:48:47"/>
+        <PresenceArea name="Albert" time="11:37:47"/>
     </div>
     
     )
