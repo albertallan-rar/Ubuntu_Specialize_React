@@ -1,5 +1,5 @@
 //Import Hooks
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 //Import Styles applied on the page
 import styles from './styles.module.css'
@@ -38,6 +38,10 @@ function Home() {
         setStundents((prevStudents) => [...prevStudents, newStudent])
         setStudentName('')
     }
+
+    useEffect(() =>{
+        console.log('useEffect foi chamado')
+    },[])
 
     return (
     <div className={styles.container}>
