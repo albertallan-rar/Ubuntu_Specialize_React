@@ -6,6 +6,7 @@ interface PresenceAreaProps{
 }
 
 function PresenceArea(props: PresenceAreaProps) {
+
     return (
         <div className={styles.card}>
             <strong>{props.name}</strong>
