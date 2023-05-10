@@ -16,6 +16,7 @@ function Home() {
 
     const [studentName, setStudentName] = useState<string>("")
     const [stundents, setStundents] = useState<Student[]>([])
+    const [userAdmin, setUserAdmin] = useState({name:'' , avatar:''})
 
     const handleAddStudent= () => {
 
@@ -40,7 +41,14 @@ function Home() {
     }
 
     useEffect(() =>{
-        console.log('useEffect foi chamado')
+        fetch('https://api.github.com/users/albertallan-rar')
+        .then(response => response.json())
+        .then(data => {
+            setUserAdmin({
+                name:data.name,
+                avatar: data.avatar_url,
+            })
+        })
     },[])
 
     return (
@@ -48,8 +56,8 @@ function Home() {
         <header>
             <h1>Lista de Presença</h1>
             <div>
-                <strong>Albert</strong>
-                <img src="https://github.com/albertallan-rar.png" alt="" />
+                <strong>{userAdmin.name}</strong>
+                <img src={userAdmin.avatar} alt="" />
             </div>
         </header>
         <input 
