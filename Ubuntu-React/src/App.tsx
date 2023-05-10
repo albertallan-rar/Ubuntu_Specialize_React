@@ -1,8 +1,9 @@
+import Home from './pages/Home'
 
 function App() {
   
   return (
-    <h1>Specialize</h1>
+    <Home />
   )
 }
 
