@@ -41,6 +41,22 @@ function Home() {
     }
 
     useEffect(() =>{
+
+        //USO DO ASYNC NO useEFFECT
+
+        // async function fetchData() {
+        //     const response = await fetch('https://api.github.com/users/albertallan-rar');
+        //     const data = await response.json();
+        //     console.log("Dados ===>", data)
+
+        //     setUserAdmin({
+        //         name: data.name,
+        //         avatar: data.avatar_url,
+        //     })   
+        // }
+
+        // fetchData()
+
         fetch('https://api.github.com/users/albertallan-rar')
         .then(response => response.json())
         .then(data => {
